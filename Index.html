@@ -1,0 +1,117 @@
+<!DOCTYPE html> <!-- Defines document type as HTML5 -->
+<html lang="en"> <!-- root element , Language of page -->
+<head> <!-- contains mets ,title,links -->
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page mobile friendly , tests encoding  -->
+    <title>My Portfolio</title> <!-- Title in browser tab -->
+    <link rel="stylesheet" href="Style.css"> <!-- Link to external CSS -->
+
+    <!-- 🌟 NEW: Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+
+<!-- HEADER / NAV -->
+<header class="site-header"> <!-- Top bar containing logo and navigation -->
+    <!-- div → like a container box → doesn’t mean anything by itself, but helps for styling.-->
+    <div class="header-inner container"> <!-- Inner container for layout -->
+        <h1 class="logo">Tenu</h1> <!-- Logo or your name, h1- is used for heading -->
+        <nav class="nav"> <!-- Navigation menus links to other pages-->
+            <ul> <!-- Unordered list (bullets). Often used in menus.  -->
+                <!-- li = A list item inside <ul> or <ol>. -->
+                    <!-- anchor LINK href goes another page -->
+                <li><a href="#hero">Home</a></li> <!-- Link to hero section -->
+                <li><a href="#about">About</a></li> <!-- Link to about section -->
+                <li><a href="#skills">Skills</a></li> <!-- Link to skills -->
+                <li><a href="#projects">Projects</a></li> <!-- Link to projects -->
+                <li><a href="#contact">Contact</a></li> <!-- Link to contact -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- jfvfhvvvvvvvvv-->
+
+<!-- HERO SECTION -->
+<section id="hero" class="hero"> <!-- Intro section with photo -->
+    <div class="hero-inner container"> <!-- Container to align text + photo -->
+        <div class="hero-text"> <!-- Text content -->
+            <h2>Hello, I'm Tenu!</h2> <!-- Intro heading -->
+             
+
+            <p>Web Developer | Learner | Designer</p> <!-- Short description -->
+             <!-- 🌟 NEW: Download CV button in hero -->
+            <a href="cv.pdf" class="btn download-btn" download>Download CV</a>
+            <a href="#contact" class="btn">Contact Me</a> <!-- Button to contact section -->
+        </div>
+        <div class="hero-photo"> <!-- Photo container -->
+            <img src="profile.jpg" alt="Tenu Photo"> <!-- Replace with your photo -->
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about container"> <!-- About me -->
+    <h2>About Me</h2> <!-- Section heading -->
+    <p>
+        I am a beginner web developer learning HTML, CSS, and JavaScript. 
+        I enjoy building small projects to improve my skills.
+    </p> <!-- About me description -->
+</section>
+
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="skills container"> <!-- Skills list -->
+    <h2>My Skills</h2> <!-- Heading -->
+    <ul class="skill-list"> <!-- Skills as a list -->
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Responsive Design</li>
+        <li>Git & GitHub</li>
+    </ul>
+</section>
+
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects container"> <!-- Projects grid -->
+    <h2>Projects</h2>
+    <div class="project-grid"> <!-- Grid container -->
+        <div class="project-card">
+            <h4>Portfolio Website</h4> <!-- Project title -->
+            <p>Simple personal portfolio using HTML & CSS.</p> <!-- Description -->
+        </div>
+        <div class="project-card">
+            <h4>Todo App</h4>
+            <p>Basic JavaScript app to track tasks.</p>
+        </div>
+        <div class="project-card">
+            <h4>Landing Page</h4>
+            <p>Responsive landing page for a small business.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact container"> <!-- Contact info -->
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:tenu@example.com">tenu@example.com</a></p> <!-- Email link -->
+
+    <!-- 🌟 NEW: Social links -->
+    <div class="social-links">
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer"> <!-- Bottom of page -->
+    <p>&copy; 2025 Tenu. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

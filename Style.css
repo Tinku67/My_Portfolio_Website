@@ -1,0 +1,198 @@
+/* ================= VARIABLES ================= */
+:root {
+  --bg: #f7f7fb;          /* Light gray background */
+  --card: #ffffff;        /* White card color */
+  --accent: #6C63FF;      /* Purple accent for highlights */
+  --text: #222;           /* Main text color */
+  --muted: #6b7280;       /* Subtle gray text */
+  --maxw: 1000px;         /* Max content width */
+}
+
+/* ================= RESET + BODY ================= */
+* { box-sizing: border-box; } /* Include padding in element width */
+html, body { margin:0; padding:0; } /* Remove default spacing */
+body {
+  font-family: system-ui, Arial, sans-serif; /* Clean font */
+  /*background: var(--bg);  Light gray bg */
+  color: var(--text); /* Dark text */
+  line-height: 1.6; /* Better readability */
+
+  /* === BACKGROUND IMAGE SETTINGS === */
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), /* Dark overlay (optional for readability) */
+    url("https://www.creativefabrica.com/wp-content/uploads/2024/07/13/Floral-motifs-Home-decor-Graphics-101874596-1.jpg"); /* 👉 Replace with your image path */
+  background-size: cover;       /* Image covers entire screen */
+  background-position: center;  /* Image stays centered */
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-attachment: fixed; /* Background stays fixed while scrolling */
+}
+
+
+
+/* ================= CONTAINER ================= */
+.container {
+  max-width: var(--maxw); /* Limit content width */
+  margin: 0 auto; /* Center horizontally */
+  padding: 0 1rem; /* Left & right padding */
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  background: var(--card); /* White bg */
+  box-shadow: 0 1px 6px rgba(16,24,40,0.06); /* Soft shadow */
+  position: sticky; top: 0; z-index: 50; /* Sticks to top */
+}
+
+.header-inner {
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Space logo & nav apart */
+  align-items: center; /* Center vertically */
+  padding: 0.9rem 0; /* Vertical spacing */
+}
+
+.logo {
+  font-size: 1.2rem; /* Slightly larger text */
+  color: var(--accent); /* Purple color */
+  margin: 0; /* Remove default margin */
+}
+
+.nav ul {
+  list-style: none; /* Remove bullets */
+  display: flex; /* Horizontal menu */
+  gap: 1rem; /* Space between links */
+  margin: 0; padding: 0;
+}
+.nav a {
+  text-decoration: none; /* Remove underline */
+  color: var(--text); /* Default dark text */
+  font-weight: 500; /* Medium bold */
+}
+.nav a:hover { color: var(--accent); } /* Hover effect */
+
+/* ================= HERO ================= */
+.hero { padding: 2.5rem 0; } /* Space around section */
+.hero-inner {
+  display: flex; /* Side-by-side layout */
+  align-items: center;
+  gap: 2rem; /* Gap between text & photo */
+}
+.hero-text h2 {
+  margin: 0 0 .5rem; /* Space below heading */
+  font-size: 1.75rem; /* Larger font */
+}
+.hero-text p {
+  margin: 0;
+  color: var(--muted); /* Muted gray */
+}
+.btn {
+  display: inline-block;
+  margin-top: 0.9rem;
+  padding: .45rem .85rem;
+  background: var(--accent); /* Purple button */
+  color: #fff;
+  border-radius: 8px; /* Rounded corners */
+  text-decoration: none;
+  font-weight: 600; /* Bold */
+}
+
+/* ================= HERO PHOTO ================= */
+.hero-photo img {
+  width: 170px; height: 170px; /* Fixed size */
+  border-radius: 50%; /* Circle */
+  object-fit: cover; /* Crop nicely */
+  border: 4px solid var(--card); /* White border */
+  box-shadow: 0 10px 30px rgba(15,23,42,0.08); /* Drop shadow */
+}
+
+/* ================= SECTIONS ================= */
+.about, .skills, .projects, .contact {
+  padding: 1.6rem 0; /* Spacing around sections */
+}
+
+/* ================= SKILLS ================= */
+.skill-list {
+  display: flex;
+  gap: 0.6rem; /* Space between skills */
+  padding: 0; list-style: none;
+  margin: 0.6rem 0 0 0;
+  flex-wrap: wrap; /* Wrap to next line */
+}
+.skill-list li {
+  background: var(--card); /* White box */
+  padding: .4rem .7rem;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 6px 18px rgba(2,6,23,0.04); /* Subtle shadow */
+  font-size: .95rem;
+}
+
+/* ================= PROJECTS ================= */
+.project-grid {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive */
+  gap: 1rem; /* Gap between cards */
+  margin-top: .8rem;
+}
+.project-card {
+  background: var(--card);
+  padding: .9rem;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 8px 24px rgba(2,6,23,0.04); /* Card shadow */
+}
+.project-card h4 { margin: 0 0 .4rem; }
+.project-card p { margin: 0; color: var(--muted); }
+
+/* ================= FOOTER ================= */
+.site-footer {
+  padding: 1rem 0;
+  text-align: center; /* Center text */
+  color: var(--muted); /* Gray text */
+  font-size: .9rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 720px) {
+  .hero-inner { flex-direction: column; text-align: center; } /* Stack on small screens */
+}
+
+/* 🌟 NEW: Highlight text */
+.highlight {
+  color: var(--accent); 
+  font-weight: 700;
+}
+
+/* 🌟 NEW: Download CV button */
+.download-btn {
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  background: #6C63FF; 
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.download-btn:hover {
+  background: #5548d4;
+}
+
+/* 🌟 NEW: Social links */
+.social-links {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.9rem;
+  border: 2px solid var(--accent);
+  border-radius: 50px;
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+.social-links a:hover {
+  background: var(--accent);
+  color: white;
+}
