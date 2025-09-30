@@ -1,5 +1,4 @@
 <!-- head -->
-
 <!DOCTYPE html> <!-- Defines document type as HTML5 -->
 <html lang="en"> <!-- root element , Language of page -->
 <head> <!-- contains mets ,title,links -->
@@ -24,7 +23,7 @@
             <ul> <!-- Unordered list (bullets). Often used in menus.  -->
                 <!-- li = A list item inside <ul> or <ol>. -->
                     <!-- anchor LINK href goes another page -->
-                <li><a href="#hero">Home</a></li> <!-- Link to hero section -->
+                <li><a href="#home">Home</a></li> <!-- Link to home section -->
                 <li><a href="#about">About</a></li> <!-- Link to about section -->
                 <li><a href="#skills">Skills</a></li> <!-- Link to skills -->
                 <li><a href="#projects">Projects</a></li> <!-- Link to projects -->
@@ -34,21 +33,22 @@
     </div>
 </header>
 
-<!-- jfvfhvvvvvvvvv-->
 
-<!-- HERO SECTION -->
-<section id="hero" class="hero"> <!-- Intro section with photo -->
-    <div class="hero-inner container"> <!-- Container to align text + photo -->
-        <div class="hero-text"> <!-- Text content -->
-            <h2>Hello, I'm Tenu!</h2> <!-- Intro heading -->
-             
-
+<!-- home SECTION -->
+<section id="home" class="home"> <!-- Intro section with photo -->
+    <div class="home-inner container"> <!-- Container to align text + photo -->
+        <div class="home-text"> <!-- Text content -->
+            <h2>Hello, I'm Tena!</h2> <!-- Intro heading -->  
             <p>Web Developer | Learner | Designer</p> <!-- Short description -->
-             <!--  NEW: Download CV button in hero -->
-            <a href="Resume-Tena Priyadarsini.pdf" class="btn download-btn" download>Download CV</a>
-            <a href="#contact" class="btn">Contact Me</a> <!-- Button to contact section -->
+    <div class="social-links">
+        <a href="https://github.com/Tinku67" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/tena-priyadarsini-pabbati-662a11254/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+         <!--  NEW: Download CV button in home -->
+            <a href="Resume- Tena Priyadarsini.Pabbati.pdf" class="btn download-btn" download>Download CV</a>
+
         </div>
-        <div class="hero-photo"> <!-- Photo container -->
+        <div class="home-photo"> <!-- Photo container -->
             <img src="Profile.jpg" alt="Tenu Photo"> <!-- Replace with your photo -->
         </div>
     </div>
@@ -77,45 +77,44 @@
     </ul>
 </section>
 
+
 <!-- PROJECTS SECTION -->
 <section id="projects" class="projects container"> <!-- Projects grid -->
     <h2>Projects</h2>
     <div class="project-grid"> <!-- Grid container -->
         <div class="project-card">
-            <h4>Portfolio Website</h4> <!-- Project title -->
-            <p>Simple personal portfolio using HTML & CSS.</p> <!-- Description -->
+            <h3>MediConsult:-</h3> <!-- Project title -->
+            <p>MediConsult is a health app that helps people manage their health by understanding their symptoms. It focuses on keeping users healthy and encourages them to take simple steps to improve their well-being.It provides clear health information, making it easier for users to make good choices 
+about their care.</p> <!-- Description -->
         </div>
         <div class="project-card">
-            <h4>Todo App</h4>
-            <p>Basic JavaScript app to track tasks.</p>
+            <h3>Spell Guard:-</h3>
+            <p>Many individuals, including students, professionals, and writers, struggle with spelling and grammatical errors 
+in their documents.To address this issue, we propose the development of a user-friendly spell checking application that leverages 
+machine learning and natural language processing (NLP) to provide real-time spelling and grammar 
+corrections.</p>
         </div>
         <div class="project-card">
-            <h4>Landing Page</h4>
-            <p>Responsive landing page for a small business.</p>
+            <h3>Email/Sms Spam Classifier:-</h3>
+            <p>It helps identify if an email or SMS message is "Spam" or "Not Spam." The app uses Natural Language Processing (NLP) techniques and a pre-trained machine learning model to give instant results. It has a simple and easy-to-use interface built with Streamlit, where users can enter a message and
+ quickly see if it's spam or not. </p>
         </div>
     </div>
 </section>
+
 
 <!-- CONTACT SECTION -->
 <section id="contact" class="contact container"> <!-- Contact info -->
     <h2>Contact Me</h2>
-     <!-- Phone -->
-    <p>Phone: <a href="tel:9392964529">9392964529</a></p>
+    <div class="btn phone-btn"> Contact Me<span class="phone-popup">📞 9392964529</span> </div>  <!-- Phone -->
     <p>Email: <a href="mailto:tenu2004@gmail.com"> p.tena2004@gmail.com</a></p> <!-- Email link -->
-
-    <!-- 🌟 NEW: Social links -->
-    <div class="social-links">
-        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer class="site-footer"> <!-- Bottom of page -->
     <p>&copy; 2025 Tenu. All rights reserved.</p>
 </footer>
-
 </body>
 </html>
 
