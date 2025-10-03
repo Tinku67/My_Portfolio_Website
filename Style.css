@@ -1,8 +1,8 @@
 /* ================= VARIABLES ================= */
 :root {
   --bg: #f7f7fb;          /* Light gray background */
-  --card: #ffffff;        /* White card color */
-  --accent: #6C63FF;      /* Purple accent for highlights */
+  --card: #e2e1db;        /* White card color */
+  --accent: #d64aae;      /* Purple accent for highlights */
   --text: #222;           /* Main text color */
   --muted: #6b7280;       /* Subtle gray text */
   --maxw: 1000px;         /* Max content width */
@@ -10,7 +10,9 @@
 
 /* ================= RESET + BODY ================= */
 * { box-sizing: border-box; } /* Include padding in element width */
-html, body { margin:0; padding:0; } /* Remove default spacing */
+html, body { 
+  margin:0;
+   padding:0; } /* Remove default spacing */
 body {
   font-family: system-ui, Arial, sans-serif; /* Clean font */
   /*background: var(--bg);  Light gray bg */
@@ -33,8 +35,11 @@ body {
 .container {
   max-width: var(--maxw); /* Limit content width */
   margin: 0 auto; /* Center horizontally */
-  padding: 0 1rem; /* Left & right padding */
+  padding:0 9rem; /* Left & right padding */
 }
+
+
+
 
 /* ================= HEADER ================= */
 .site-header {
@@ -52,29 +57,49 @@ body {
    
 }
 
+
+
 .logo {
-  font-size: 1.2rem; /* Slightly larger text */
-  color: var(--accent); /* Purple color */
-  margin: 0; /* Remove default margin */
+    display: flex;       /* Align image and text horizontally */
+    align-items: center; /* Center vertically */
+    gap: 2px;            /* Space between image and text */
+    font-size: 1.2rem; /* Slightly larger text */
+    color: var(--accent); /* Purple color */
+    margin: 0;/* Remove default margin */
+
+}
+
+.logo-img {
+    width: 40px;   /* Adjust size as needed */
+    height: 60px;  /* Keep it square */
+    object-fit: cover;
+    border-radius: 50%; /* Optional: make it circular */
+}
+
+
+
+/* 1. Reset all links to add a transparent underline space */
+.nav a {
+  text-decoration: none; /* Remove underline */
+  color: var(--text); /* Default dark text */
+  font-weight: 700; /* Medium bold */
+  font-size: 1.1rem; /* Slightly larger text */
+  border-bottom: 4px solid transparent; /* Hidden underline */
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
+ 
 }
 
 .nav ul {
   list-style: none; /* Remove bullets */
   display: flex; /* Horizontal menu */
-  gap: 1rem; /* Space between links */
-  margin: 0; padding: 0;
+  gap: 1.3rem; /* Space between links */
+  margin: 0; 
+  padding: 0;
+  margin-left: 10rem;
 }
-/* 1. Reset all links to add a transparent underline space */
-.nav a {
-  text-decoration: none; /* Remove underline */
-  color: var(--text); /* Default dark text */
-  font-weight: 500; /* Medium bold */
-  border-bottom: 2px solid transparent; /* Hidden underline */
-  padding-bottom: 2px;
-  transition: all 0.2s ease;
 
-  
-}
+
 .nav a:hover { 
   color: #cb48ad; } /* Hover effect */
 
@@ -86,7 +111,7 @@ body {
   display: flex; /* Side-by-side layout */
   align-items: center; /* Center vertically */
   justify-content: space-between; /* Space text & photo apart */
-  gap: 2rem; /* Gap between text & photo */
+  gap: 1rem; /* Gap between text & photo */
 }
 .home-text h2 {
   margin: 0 0 .5rem; /* Space below heading */
@@ -94,8 +119,18 @@ body {
 }
 .home-text p {
   margin: 0;
-  color: var(--muted); /* Muted gray */
+  color:  #ebe9ef; /* Pinkish color */
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.8;      /* Optional: improve readability */
 }
+
+.home-text .highlight {
+  color: #82064e;
+  font-weight: 650;
+  font-size: 1.2rem;
+}
+  
 .btn {
   display: inline-block;
   margin-top: 0.9rem;
@@ -110,7 +145,7 @@ body {
 /* ================= home PHOTO ================= */
 .home-photo img {
   width: 250px; height: 370px; /* Fixed size */
-  border-radius: 10px; /* Circle */
+  border-radius: 60px; /* Circle */
   object-fit: cover; /* Crop nicely */
   object-position: center; /* This centers the image vertically and horizontally */
   border: 4px solid var(--card); /* White border */
@@ -118,15 +153,20 @@ body {
   
 }
 
+
+
+
 /* ================= SECTIONS ================= */
 .about, .skills, .projects, .contact {
   padding: 1.6rem 0; /* Spacing around sections */
 }
 
+
+
 /* ================= SKILLS ================= */
 .skills h2 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
 /* Flip container */
@@ -138,8 +178,8 @@ body {
 
 /* Flip card */
 .flip-card {
-  width: 220px;
-  height: 120px;
+  width: 250px;
+  height: 200px;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -165,23 +205,24 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.2em;
   padding: 10px;
 }
 
 /* Front face style */
 .front {
   background-color: #eaa039;
-  color: #fff;
+  color: #26660b;
 }
 
 /* Back face style */
 .back {
   background-color: #fff;
-  color: #333;
+  color: #c25656;
   transform: rotateY(180deg);
   border: 2px solid #007bff;
 }
+
 
 
 
@@ -306,3 +347,58 @@ body {
     font-weight: 700;              /* Make text bold */
     border-bottom: 2px solid #12a3c3 !important; /* Add colored underline */
 }
+
+/* Search bar */
+.search-bar {
+  margin-left: 1rem;; /* Push it to the far right */
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.search-bar input {
+  padding: 6px 10px;
+  border: 2px solid #cb48ad;
+  border-radius: 20px;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+
+  background-color: #6aacb8; /* <-- Add this line for input background */
+  color: #be1b98; /* Text color inside input */
+}
+
+.search-bar input:focus {
+  border-color: #5aabd7;
+  box-shadow: 0 0 6px rgba(90, 171, 215, 0.6);
+}
+
+.search-bar button {
+  background: #cb48ad;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+  background: #5aabd7;
+}
+/* Normal text in About Me */
+.about p {
+  color: #ede9ef;       /* Normal text color: dark purple */
+  font-weight: 600;      /* Slightly bold */
+  font-size: 1.2rem;     /* Adjust size */
+  line-height: 1.8;      /* Optional: improve readability */
+}
+
+/* Highlighted words inside About Me */
+.about p .highlight {
+  color: #82064e;        /* Bright pink/purple for highlights */
+  font-weight: 650;      /* Bold to stand out */
+  font-size: 1.2rem;     /* Keep same size as normal text */
+}
+
